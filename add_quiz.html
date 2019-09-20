@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style> 
+       
+        input[type=text] {
+          width: 50%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 3px solid #ccc;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          outline: none;
+        }
+        
+        input[type=text]:focus {
+          border: 3px solid #555;
+        }
+        input[type=number] {
+          width: 50%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 3px solid #ccc;
+          -webkit-transition: 0.5s;
+          transition: 0.5s;
+          outline: none;
+        }
+        
+        input[type=number]:focus {
+          border: 3px solid #555;
+        }
+        .button {
+  background-color: #1b6df5; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button4 {border-radius: 10px;}
+#rcorners3 {
+  border-radius: 10px;
+  background: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 350px;
+  height: 50px;  
+}
+#rcorners2 {
+  border-radius: 10px;
+  background: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  width: 350px;
+  height: 30px;  
+}
+#rcorners4 {
+  border-radius: 10px;
+  background: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 500px;
+  height: 500px;  
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}#grad1 {
+  height: 200px;
+  background-image: linear-gradient(to right, #146af5, #89b0f0); /* Standard syntax (must be last) */
+}
+        </style>
+</head>
+
+<body  id="grad1">
+        <div  id="rcorners4" style="background-color : #ffffff;text-align: center;margin-left : 450px;margin-top: 50px;font-size: 25px;width: 350px;padding: 30px">
+    <form action="add_quiz" method="post">
+       <input placeholder="Enter Question here" type="text"id="rcorners3" name="question" required ><br>
+   
+        <input placeholder="optionA" type="text" id="rcorners3" name="optionA"required><br>
+        <input placeholder="optionB" type="text"id="rcorners3" name="optionB"required><br>
+        <input placeholder="optionC" type="text" id="rcorners3"name="optionC"required><br>
+        <input placeholder="optionD" type="text"id="rcorners3" name="optionD"required><br>
+   
+        <select id = "rcorners2" name = "correctAnswer" >
+            <option>--select correct option--</option>
+            <option>option1</option>
+            <option>option2</option>
+            <option>option3</option>
+            <option>option4</option>
+
+        </select>
+    <br><input type="submit" value="Next question" class="button button4 button2">
+</form>
+
+<hr>
+
+<form action="dashboard">
+    <input type="submit" value="Finish quiz" class="button button4 button2" style="width: 150px">
+</form>
+</div>
+
+</body>
+
+</html>

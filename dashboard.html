@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style> 
+    input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+.button {
+  background-color: #1b6df5; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.buttongradient{
+  background-image: linear-gradient(to right, #02aab0, #00cdac);
+  height: 150px;
+width : 150px;
+}
+.buttongradient1{
+  background-image: linear-gradient(to right, #f83600	, #FF6347	);
+  height: 150px;
+width : 150px;
+}
+.buttongradient2{
+  background-image: linear-gradient(to right, #56ab2f, #a8e063	);
+  height: 150px;
+width : 150px;
+}
+
+.button5 {border-radius: 100px;
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#grad1 {
+  height: 200px;
+  background-image: linear-gradient(to right, #cc2b5e, #42275a); /* Standard syntax (must be last) */
+}
+#rcorners4 {
+  border-radius: 10px;
+  
+  background: url(paper.gif);
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px; 
+  width: 750px;
+  height: 500px;  
+}
+</style>
+   </head>
+
+<body id="grad1"">
+<div id="rcorners4" style=" background-color : #ffffff;text-align: center;margin-left : 300px;margin-top: 50px;font-size: 25px;width: 750px;padding: 10px">
+ <h1 style="color: #4b0082">You have access to these activities</h1>
+ <br><br>
+ <div style="float: left;width : 30%">
+ <form  method="POST" action = "add_quiz">
+   
+    <input type="submit"  class="button button5 button2 buttongradient" value="ADD Quiz" onclick="askQuestion()">
+    <input type="hidden"  name="quizname" id="quizname">
+    <input type="hidden" name="quizdescription" id="quizdescription">
+</form>
+ </div>
+<div style="float: left;width : 40%">
+<form  action = "add_assignments">    
+    <input type="submit" class="button button5 button2 buttongradient1" value="ADD Assignments">
+   </form>
+  </div>
+
+  <div style="margin-left: 150px""width : 170%;">
+<form action="add_events" action = "add_events">
+    <input type="submit"  class="button button5 button2 buttongradient2" onclick="add_events" value="ADD Events">
+   </form>
+  </div>
+  </div>
+</body>
+<script>
+  
+  function askQuestion() {
+  var question = prompt("Please enter your quiz name:", "");
+  var description = prompt("please enter the quiz description : ","");
+  document.getElementById("quizname").value = question;
+  document.getElementById("quizdescription").value = description;
+}
+</script>
+
+</html>
